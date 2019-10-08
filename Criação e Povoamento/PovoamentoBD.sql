@@ -165,13 +165,13 @@ INSERT INTO cobre (codigo_acidente, cnpj_seguradora, renavam, cpf_cliente) VALUE
 INSERT INTO cobre (codigo_acidente, cnpj_seguradora, renavam, cpf_cliente) VALUES (3818, '00.111.555/7777-04', 17893434104, '111.111.666-11');
 
 -- cliente_seguradora
-INSERT INTO cliente_seguradora (cnpj_seguradora, cpf_cliente, data_contratacao, anuidade, franquia, cobertura) VALUES ('00.555.111/3333-00', '111.111.111-11', 1300, 750, A);
-INSERT INTO cliente_seguradora (cnpj_seguradora, cpf_cliente, data_contratacao, anuidade, franquia, cobertura) VALUES ('00.555.111/3333-00', '111.111.222-11', 1250, 850, A);
-INSERT INTO cliente_seguradora (cnpj_seguradora, cpf_cliente, data_contratacao, anuidade, franquia, cobertura) VALUES ('00.555.111/3333-00', '111.111.333-11', 950, 999, B);
-INSERT INTO cliente_seguradora (cnpj_seguradora, cpf_cliente, data_contratacao, anuidade, franquia, cobertura) VALUES ('00.444.222/4444-01', '111.111.444-11', 1000, 1200, B);
-INSERT INTO cliente_seguradora (cnpj_seguradora, cpf_cliente, data_contratacao, anuidade, franquia, cobertura) VALUES ('00.444.222/4444-01', '111.111.555-11', 1500, 1000, B);
-INSERT INTO cliente_seguradora (cnpj_seguradora, cpf_cliente, data_contratacao, anuidade, franquia, cobertura) VALUES ('00.444.222/4444-01', '111.111.666-11', 1770, 1500, C);
-INSERT INTO cliente_seguradora (cnpj_seguradora, cpf_cliente, data_contratacao, anuidade, franquia, cobertura) VALUES ('00.333.333/5555-02', '111.111.777-11', 2000, 1750, D);
-INSERT INTO cliente_seguradora (cnpj_seguradora, cpf_cliente, data_contratacao, anuidade, franquia, cobertura) VALUES ('00.222.444/6666-03', '111.111.888-11', 2200, 1900, D);
-INSERT INTO cliente_seguradora (cnpj_seguradora, cpf_cliente, data_contratacao, anuidade, franquia, cobertura) VALUES ('00.222.444/6666-03', '111.111.999-11', 2500, 1900, D);
-INSERT INTO cliente_seguradora (cnpj_seguradora, cpf_cliente, data_contratacao, anuidade, franquia, cobertura) VALUES ('00.111.555/7777-04', '111.222.111-11', 3333, 2500, E);
+INSERT INTO cliente_seguradora (cnpj_seguradora, cpf_cliente, data_contratacao, anuidade, franquia, cobertura) VALUES ('00.555.111/3333-00', '111.111.111-11', to_date('18/10/1992','dd/mm/yy'),1300, 750, 'A');
+INSERT INTO cliente_seguradora (cnpj_seguradora, cpf_cliente, data_contratacao, anuidade, franquia, cobertura) VALUES ('00.555.111/3333-00', '111.111.222-11', to_date('23/10/2014','dd/mm/yy'),1250, 850, 'A');
+INSERT INTO cliente_seguradora (cnpj_seguradora, cpf_cliente, data_contratacao, anuidade, franquia, cobertura) VALUES ('00.555.111/3333-00', '111.111.333-11', to_date('07/11/2002','dd/mm/yy'),9500, 999, 'B');
+INSERT INTO cliente_seguradora (cnpj_seguradora, cpf_cliente, data_contratacao, anuidade, franquia, cobertura) VALUES ('00.444.222/4444-01', '111.111.444-11', to_date('01/05/1997','dd/mm/yy'),1000, 1200, 'B');
+INSERT INTO cliente_seguradora (cnpj_seguradora, cpf_cliente, data_contratacao, anuidade, franquia, cobertura) VALUES ('00.444.222/4444-01', '111.111.555-11', to_date('13/12/2007','dd/mm/yy'),1500, 1000, 'B');
+INSERT INTO cliente_seguradora (cnpj_seguradora, cpf_cliente, data_contratacao, anuidade, franquia, cobertura) VALUES ('00.444.222/4444-01', '111.111.666-11', to_date('24/03/2005','dd/mm/yy'),1770, 1500, 'C');
+INSERT INTO cliente_seguradora (cnpj_seguradora, cpf_cliente, data_contratacao, anuidade, franquia, cobertura) VALUES ('00.333.333/5555-02', '111.111.777-11', to_date('17/02/2017','dd/mm/yy'),2000, 1750, 'D');
+INSERT INTO cliente_seguradora (cnpj_seguradora, cpf_cliente, data_contratacao, anuidade, franquia, cobertura) VALUES ('00.222.444/6666-03', '111.111.888-11', to_date('20/07/2019','dd/mm/yy'),2200, 1900, 'D');
+INSERT INTO cliente_seguradora (cnpj_seguradora, cpf_cliente, data_contratacao, anuidade, franquia, cobertura) VALUES ('00.222.444/6666-03', '111.111.999-11', to_date('28/02/2000','dd/mm/yy'),2500, 1900, 'D');
+INSERT INTO cliente_seguradora (cnpj_seguradora, cpf_cliente, data_contratacao, anuidade, franquia, cobertura) VALUES ('00.111.555/7777-04', '111.222.111-11', to_date('06/10/2001','dd/mm/yy'),3333, 2500, 'E');
