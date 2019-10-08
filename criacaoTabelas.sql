@@ -1,5 +1,7 @@
+DROP TABLE endereco_pessoa;
+DROP TABLE endereco_seguradora;
 DROP TABLE cliente_seguradora;
-DROP TABLE telefones_seguradora;
+DROP TABLE telefone_seguradora;
 DROP TABLE cobre;
 DROP TABLE funcionario;
 DROP TABLE dependente;
@@ -11,41 +13,25 @@ DROP TABLE seguradora;
 DROP TABLE pessoa;
  
 CREATE TABLE pessoa (
-    cpf VARCHAR2(14),
-    nome VARCHAR2(30) NOT NULL,
-    data_de_nascimento DATE NOT NULL,
-    sexo CHAR(1) CHECK (sexo IN ('M', 'F')),
-    rua VARCHAR2(50),
-    cep VARCHAR2(9),
-    numero NUMBER NOT NULL,
-    complemento VARCHAR2(50),
-    cidade VARCHAR2(20),
-    estado VARCHAR2(20),
-    pais VARCHAR2(20),
-    bairro VARCHAR2(20),
-    CONSTRAINT pessoa_pk PRIMARY KEY (cpf)
+    cpf_pessoa VARCHAR2(14),
+    nome_pessoa VARCHAR2(30) NOT NULL,
+    data_nascimento_pessoa DATE NOT NULL,
+    sexo_pessoa CHAR(1) CHECK (sexo_pessoa IN ('M', 'F')),
+    CONSTRAINT pessoa_pk PRIMARY KEY (cpf_pessoa)
 );
  
 CREATE TABLE seguradora (
-   cnpj VARCHAR2(18),
-   nome VARCHAR2(30) NOT NULL,
-   rua VARCHAR2(30) NOT NULL,
-   numero NUMBER,
-   complemento VARCHAR2(30),
-   cidade VARCHAR2(15) NOT NULL,
-   estado VARCHAR2(2) NOT NULL,
-   cep NUMBER NOT NULL,
-   pais VARCHAR2(2) NOT NULL,
-   bairro VARCHAR2(30) NOT NULL,
-   CONSTRAINT cnpj_pk PRIMARY KEY (cnpj)
+   cnpj_seguradora VARCHAR2(18),
+   nome_seguradora VARCHAR2(30) NOT NULL,
+   CONSTRAINT seguradora_pk PRIMARY KEY (cnpj_seguradora)
 );
  
 CREATE TABLE cliente (
     cpf_cliente VARCHAR2(14),
     numero_cliente VARCHAR2(50) NOT NULL,
-    data_associação DATE NOT NULL,
+    data_associação_cliente DATE NOT NULL,
     CONSTRAINT cliente_pk PRIMARY KEY (cpf_cliente),
-    CONSTRAINT cliente_fk FOREIGN KEY (cpf_cliente) REFERENCES pessoa (cpf)
+    CONSTRAINT cliente_fk FOREIGN KEY (cpf_cliente) REFERENCES pessoa (cpf_pessoa)
 );
  
 CREATE TABLE automovel (
@@ -66,63 +52,91 @@ CREATE TABLE casualidade (
 );
  
 CREATE TABLE telefone_pessoa (
-    pessoa VARCHAR2(14) NOT NULL,
-    DDD NUMBER(3) NOT NULL,
-    num_telefone VARCHAR2(10) NOT NULL,
-    CONSTRAINT telefone_pessoa_pk PRIMARY KEY (DDD, num_telefone),
-    CONSTRAINT telefone_pessoa_fk FOREIGN KEY (pessoa) REFERENCES pessoa (cpf)
+    cpf_pessoa VARCHAR2(14) NOT NULL,
+    DDD_pessoa NUMBER(3) NOT NULL,
+    numero_telefone_pessoa VARCHAR2(10) NOT NULL,
+    CONSTRAINT telefone_pessoa_pk PRIMARY KEY (cpf_pessoa, DDD_pessoa, numero_telefone_pessoa),
+    CONSTRAINT telefone_pessoa_fk FOREIGN KEY (cpf_pessoa) REFERENCES pessoa (cpf_pessoa)
 );
  
 CREATE TABLE dependente (
-    responsavel VARCHAR2(14),
-    numero_do_dependente NUMBER NOT NULL,
-    nome_do_dependente VARCHAR2(30) NOT NULL,
+    cpf_cliente VARCHAR2(14),
+    numero_dependente NUMBER NOT NULL,
+    nome_dependente VARCHAR2(30) NOT NULL,
     sexo_dependente CHAR(1),
-    data_de_nascimento DATE NOT NULL,
-    CONSTRAINT dependente PRIMARY KEY (responsavel, numero_do_dependente),
-    CONSTRAINT dependente_fk FOREIGN KEY (responsavel) REFERENCES pessoa (cpf)
+    data_nascimento_dependente DATE NOT NULL,
+    CONSTRAINT dependente PRIMARY KEY (cpf_cliente, numero_dependente),
+    CONSTRAINT dependente_fk FOREIGN KEY (cpf_cliente) REFERENCES cliente (cpf_cliente)
 );
  
 CREATE TABLE funcionario (
    cpf_funcionario VARCHAR2(14),
-   salario NUMBER NOT NULL,
-   pis NUMBER NOT NULL,
-   cnpj_seguradora NUMBER NOT NULL,
+   salario_funcionario NUMBER NOT NULL,
+   pis_funcionario NUMBER NOT NULL,
+   cnpj_seguradora VARCHAR2(18) NOT NULL,
    cpf_supervisor VARCHAR2(14),
    CONSTRAINT funcionario_pk PRIMARY KEY (cpf_funcionario),
-   CONSTRAINT funcionario_cpf_func_fk FOREIGN KEY (cpf_funcionario) REFERENCES pessoa (cpf),
+   CONSTRAINT funcionario_cpf_func_fk FOREIGN KEY (cpf_funcionario) REFERENCES pessoa (cpf_pessoa),
    CONSTRAINT funcionario_cpf_superv_fk FOREIGN KEY (cpf_supervisor) REFERENCES funcionario (cpf_funcionario)
 );
  
  
 CREATE TABLE cobre (
-    casualidade NUMBER,
-    seguradora VARCHAR2(18),
-    automovel NUMBER,
+    codigo_acidente NUMBER,
+    cnpj_seguradora VARCHAR2(18),
+    renavam NUMBER,
     cpf_cliente VARCHAR2(14),
-    CONSTRAINT dependente_pk PRIMARY KEY (casualidade, seguradora, automovel, cpf_cliente),
-    CONSTRAINT dependente_casualidade_fk FOREIGN KEY (casualidade) REFERENCES casualidade (codigo_acidente),
-    CONSTRAINT dependente_seguradora_fk FOREIGN KEY (seguradora) REFERENCES seguradora (cnpj),
-    CONSTRAINT dependente_automovel_fk FOREIGN KEY (automovel) REFERENCES automovel (renavam),
+    CONSTRAINT dependente_pk PRIMARY KEY (codigo_acidente, cnpj_seguradora, renavam, cpf_cliente),
+    CONSTRAINT dependente_casualidade_fk FOREIGN KEY (codigo_acidente) REFERENCES casualidade (codigo_acidente),
+    CONSTRAINT dependente_seguradora_fk FOREIGN KEY (cnpj_seguradora) REFERENCES seguradora (cnpj_seguradora),
+    CONSTRAINT dependente_automovel_fk FOREIGN KEY (renavam) REFERENCES automovel (renavam),
     CONSTRAINT dependente_cpf_cliente_fk FOREIGN KEY (cpf_cliente) REFERENCES cliente (cpf_cliente)
 );
  
-CREATE TABLE telefones_seguradora (
-    seguradora VARCHAR2(14) NOT NULL,
-    DDD NUMBER(3) NOT NULL,
-    num_telefone VARCHAR2(10) NOT NULL,
-    CONSTRAINT telefones_seguradora_pk PRIMARY KEY (seguradora, DDD, num_telefone),
-    CONSTRAINT telefones_seguradora_seguradora_fk FOREIGN KEY (seguradora) REFERENCES seguradora (cnpj)
+CREATE TABLE telefone_seguradora (
+    cnpj_seguradora VARCHAR2(18) NOT NULL,
+    DDD_seguradora NUMBER(3) NOT NULL,
+    numero_telefone_seguradora VARCHAR2(10) NOT NULL,
+    CONSTRAINT telefones_seguradora_pk PRIMARY KEY (cnpj_seguradora, DDD_seguradora, numero_telefone_seguradora),
+    CONSTRAINT telefones_seguradora_seguradora_fk FOREIGN KEY (cnpj_seguradora) REFERENCES seguradora (cnpj_seguradora)
 );
  
 CREATE TABLE cliente_seguradora (
-   cnpj_contratada VARCHAR2(18),
+   cnpj_seguradora VARCHAR2(18),
    cpf_cliente VARCHAR2(14),
    data_contratacao DATE NOT NULL,
    anuidade NUMBER NOT NULL,
    franquia NUMBER NOT NULL,
    cobertura CHAR(1) NOT NULL,
-   CONSTRAINT cliente_seguradora_pk PRIMARY KEY (cnpj_contratada, cpf_cliente),
-   CONSTRAINT cliente_seguradora_cpf_pk FOREIGN KEY (cpf_cliente) REFERENCES pessoa (cpf),
-   CONSTRAINT cliente_seguradora_cnpj_pk FOREIGN KEY (cnpj_contratada) REFERENCES seguradora (cnpj)
+   CONSTRAINT cliente_seguradora_pk PRIMARY KEY (cnpj_seguradora, cpf_cliente),
+   CONSTRAINT cliente_seguradora_cpf_pk FOREIGN KEY (cpf_cliente) REFERENCES cliente (cpf_cliente),
+   CONSTRAINT cliente_seguradora_cnpj_pk FOREIGN KEY (cnpj_seguradora) REFERENCES seguradora (cnpj_seguradora)
+);
+
+CREATE TABLE endereco_pessoa (
+    cpf_pessoa VARCHAR2(14),
+    rua_pessoa VARCHAR2(50),
+    cep_pessoa NUMBER NOT NULL,
+    numero_pessoa NUMBER,
+    complemento_pessoa VARCHAR2(50),
+    cidade_pessoa VARCHAR2(20),
+    estado_pessoa VARCHAR2(20),
+    pais_pessoa VARCHAR2(2),
+    bairro_pessoa VARCHAR2(20),
+    CONSTRAINT endereco_pessoa_pḱ PRIMARY KEY (cpf_pessoa, cep_pessoa),
+    CONSTRAINT endereco_pessoa_fk FOREIGN KEY (cpf_pessoa) REFERENCES pessoa (cpf_pessoa)
+);
+
+CREATE TABLE endereco_seguradora (
+    cnpj_seguradora VARCHAR2(18),
+    rua_seguradora VARCHAR2(50),
+    cep_seguradora NUMBER NOT NULL,
+    numero_seguradora NUMBER,
+    complemento_seguradora VARCHAR2(50),
+    cidade_seguradora VARCHAR2(20),
+    estado_seguradora VARCHAR2(20),
+    pais_seguradora VARCHAR2(2),
+    bairro_seguradora VARCHAR2(20),
+    CONSTRAINT endereco_seguradora_pḱ PRIMARY KEY (cnpj_seguradora, cep_seguradora),
+    CONSTRAINT endereco_seguradora_fk FOREIGN KEY (cnpj_seguradora) REFERENCES seguradora (cnpj_seguradora)
 );
