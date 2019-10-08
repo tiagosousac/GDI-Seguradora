@@ -21,6 +21,7 @@ INSERT INTO pessoa(nome_pessoa,cpf_pessoa,data_nascimento_pessoa,sexo_pessoa) VA
 INSERT INTO pessoa(nome_pessoa,cpf_pessoa,data_nascimento_pessoa,sexo_pessoa) VALUES ('Alexa','111.333.111-11', to_date('07/05/1979', 'dd/mm/yy'),'F');
 INSERT INTO pessoa(nome_pessoa,cpf_pessoa,data_nascimento_pessoa,sexo_pessoa) VALUES ('Giord','111.333.222-11', to_date('06/05/1980', 'dd/mm/yy'),'F');
 
+-- endereco-pessoa
 INSERT INTO endereco_pessoa (cpf_pessoa, rua_pessoa,numero_pessoa,complemento_pessoa,cidade_pessoa,estado_pessoa,cep_pessoa,pais_pessoa,bairro_pessoa) VALUES ('111.111.111-11','Rua Fausto',75,'perto da churrasqueira','Estudios Globo','PROJAC',52990235,'BR','Ta pegando Fogo');
 INSERT INTO endereco_pessoa (cpf_pessoa, rua_pessoa,numero_pessoa,complemento_pessoa,cidade_pessoa,estado_pessoa,cep_pessoa,pais_pessoa,bairro_pessoa) VALUES ('111.111.222-11','Rua Drauzio Varella',90,'perto da resposta','Recife','Pernambuco',52060520,'BR','As vezes sim');
 INSERT INTO endereco_pessoa (cpf_pessoa, rua_pessoa,numero_pessoa,complemento_pessoa,cidade_pessoa,estado_pessoa,cep_pessoa,pais_pessoa,bairro_pessoa) VALUES ('111.111.333-11','Rua Irineu',68,'Voce nao sabe','Estudios Globo','PROJAC', 52990235,'BR','Nem eu');
@@ -42,7 +43,7 @@ INSERT INTO endereco_pessoa (cpf_pessoa, rua_pessoa,numero_pessoa,complemento_pe
 INSERT INTO endereco_pessoa (cpf_pessoa, rua_pessoa,numero_pessoa,complemento_pessoa,cidade_pessoa,estado_pessoa,cep_pessoa,pais_pessoa,bairro_pessoa) VALUES ('111.333.111-11','Rua Domingao', 69, NULL, 'Maragogi', 'Alagoas', 502320165,  'BR','PROJAC');
 INSERT INTO endereco_pessoa (cpf_pessoa, rua_pessoa,numero_pessoa,complemento_pessoa,cidade_pessoa,estado_pessoa,cep_pessoa,pais_pessoa,bairro_pessoa) VALUES ('111.333.222-11','Rua Domingao', 69, NULL, 'Maragogi', 'Alagoas', 502320165,  'BR','PROJAC');
 
--- sobrando
+-- sobrando (desatualizado)
 --INSERT INTO pessoa(nome_pessoa,cpf_pessoa,data_nascimento_pessoa,sexo_pessoa,rua_pessoa,numero_pessoa,complemento_pessoa,cidade_pessoa,estado_pessoa,cep_pessoa,pais_pessoa,bairro_pessoa) VALUES ('Germana','111.333.333-11', to_date('05/06/1995', 'dd/mm/yy'),'F'  ,'Rua Domingao',  69, 'Maragogi', 'Alagoas', 502320165,  'BR','PROJAC');
 --INSERT INTO pessoa(nome_pessoa,cpf_pessoa,data_nascimento_pessoa,sexo_pessoa,rua_pessoa,numero_pessoa,complemento_pessoa,cidade_pessoa,estado_pessoa,cep_pessoa,pais_pessoa,bairro_pessoa) VALUES ('Maria',  '111.333.444-11', to_date('04/06/1998', 'dd/mm/yy'),'F'  ,'Rua Domingao',  69, 'Maragogi', 'Alagoas', 502320165,  'BR','PROJAC');
 --INSERT INTO pessoa(nome_pessoa,cpf_pessoa,data_nascimento_pessoa,sexo_pessoa,rua_pessoa,numero_pessoa,complemento_pessoa,cidade_pessoa,estado_pessoa,cep_pessoa,pais_pessoa,bairro_pessoa) VALUES ('Martha Bulbasaur','111.333.555-11', to_date('03/07/1995', 'dd/mm/yy'),'F'  ,'Rua Domingao',  69, 'Maragogi', 'Alagoas', 502320165,  'BR','PROJAC');
