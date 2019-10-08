@@ -1,5 +1,7 @@
+DROP TABLE endereco_pessoa;
+DROP TABLE endereco_seguradora;
 DROP TABLE cliente_seguradora;
-DROP TABLE telefones_seguradora;
+DROP TABLE telefone_seguradora;
 DROP TABLE cobre;
 DROP TABLE funcionario;
 DROP TABLE dependente;
@@ -71,7 +73,7 @@ CREATE TABLE funcionario (
    cpf_funcionario VARCHAR2(14),
    salario_funcionario NUMBER NOT NULL,
    pis_funcionario NUMBER NOT NULL,
-   cnpj_seguradora NUMBER NOT NULL,
+   cnpj_seguradora VARCHAR2(18) NOT NULL,
    cpf_supervisor VARCHAR2(14),
    CONSTRAINT funcionario_pk PRIMARY KEY (cpf_funcionario),
    CONSTRAINT funcionario_cpf_func_fk FOREIGN KEY (cpf_funcionario) REFERENCES pessoa (cpf_pessoa),
@@ -92,7 +94,7 @@ CREATE TABLE cobre (
 );
  
 CREATE TABLE telefone_seguradora (
-    cnpj_seguradora VARCHAR2(14) NOT NULL,
+    cnpj_seguradora VARCHAR2(18) NOT NULL,
     DDD_seguradora NUMBER(3) NOT NULL,
     numero_telefone_seguradora VARCHAR2(10) NOT NULL,
     CONSTRAINT telefones_seguradora_pk PRIMARY KEY (cnpj_seguradora, DDD_seguradora, numero_telefone_seguradora),

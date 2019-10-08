@@ -30,18 +30,18 @@ INSERT INTO endereco_pessoa (cpf_pessoa, rua_pessoa,numero_pessoa,complemento_pe
 INSERT INTO endereco_pessoa (cpf_pessoa, rua_pessoa,numero_pessoa,complemento_pessoa,cidade_pessoa,estado_pessoa,cep_pessoa,pais_pessoa,bairro_pessoa) VALUES ('111.111.777-11','Rua Chiquinha',66,'Vila do Chaves','Cidade do méxico','Estado do presunto',35033500, 'VC','Pátio da frente');
 INSERT INTO endereco_pessoa (cpf_pessoa, rua_pessoa,numero_pessoa,complemento_pessoa,cidade_pessoa,estado_pessoa,cep_pessoa,pais_pessoa,bairro_pessoa) VALUES ('111.111.888-11','Rua Fausto',51,'perto da churrasqueira','Estudios Globo','PROJAC', 52990235,'BR','Ta pegando Fogo');
 INSERT INTO endereco_pessoa (cpf_pessoa, rua_pessoa,numero_pessoa,complemento_pessoa,cidade_pessoa,estado_pessoa,cep_pessoa,pais_pessoa,bairro_pessoa) VALUES ('111.111.999-11','Rua Chiquinha',84,'Vila do Chaves','Cidade do méxico','Estado do presunto',35033500,'VC','Pátio da frente');
-INSERT INTO endereco_pessoa (cpf_pessoa, rua_pessoa,numero_pessoa,complemento_pessoa,cidade_pessoa,estado_pessoa,cep_pessoa,pais_pessoa,bairro_pessoa) VALUES ('111.222.111-11','Rua Domingao',  69, 'Maragogi', 'Alagoas', 502320165,  'BR','PROJAC');
-INSERT INTO endereco_pessoa (cpf_pessoa, rua_pessoa,numero_pessoa,complemento_pessoa,cidade_pessoa,estado_pessoa,cep_pessoa,pais_pessoa,bairro_pessoa) VALUES ('111.222.222-11','Rua Domingao',  69, 'Maragogi', 'Alagoas', 502320165,  'BR','PROJAC');
-INSERT INTO endereco_pessoa (cpf_pessoa, rua_pessoa,numero_pessoa,complemento_pessoa,cidade_pessoa,estado_pessoa,cep_pessoa,pais_pessoa,bairro_pessoa) VALUES ('111.222.333-11','Rua Domingao',  69, 'Maragogi', 'Alagoas', 502320165,  'BR','PROJAC');
-INSERT INTO endereco_pessoa (cpf_pessoa, rua_pessoa,numero_pessoa,complemento_pessoa,cidade_pessoa,estado_pessoa,cep_pessoa,pais_pessoa,bairro_pessoa) VALUES ('111.222.444-11','Rua Domingao',  69, 'Maragogi', 'Alagoas', 502320165,  'BR','PROJAC');
-INSERT INTO endereco_pessoa (cpf_pessoa, rua_pessoa,numero_pessoa,complemento_pessoa,cidade_pessoa,estado_pessoa,cep_pessoa,pais_pessoa,bairro_pessoa) VALUES ('111.222.555-11','Rua Domingao',  69, 'Maragogi', 'Alagoas', 502320165,  'BR','PROJAC');
-INSERT INTO endereco_pessoa (cpf_pessoa, rua_pessoa,numero_pessoa,complemento_pessoa,cidade_pessoa,estado_pessoa,cep_pessoa,pais_pessoa,bairro_pessoa) VALUES ('111.222.666-11','Rua Domingao',  69, 'Maragogi', 'Alagoas', 502320165,  'BR','PROJAC');
-INSERT INTO endereco_pessoa (cpf_pessoa, rua_pessoa,numero_pessoa,complemento_pessoa,cidade_pessoa,estado_pessoa,cep_pessoa,pais_pessoa,bairro_pessoa) VALUES ('111.222.777-11','Rua Domingao',  69, 'Maragogi', 'Alagoas', 502320165,  'BR','PROJAC');
-INSERT INTO endereco_pessoa (cpf_pessoa, rua_pessoa,numero_pessoa,complemento_pessoa,cidade_pessoa,estado_pessoa,cep_pessoa,pais_pessoa,bairro_pessoa) VALUES ('111.222.888-11','Rua Domingao',  69, 'Maragogi', 'Alagoas', 502320165,  'BR','PROJAC');
-INSERT INTO endereco_pessoa (cpf_pessoa, rua_pessoa,numero_pessoa,complemento_pessoa,cidade_pessoa,estado_pessoa,cep_pessoa,pais_pessoa,bairro_pessoa) VALUES ('111.222.999-11','Rua Domingao',  69, 'Maragogi', 'Alagoas', 502320165,  'BR','PROJAC');
-INSERT INTO endereco_pessoa (cpf_pessoa, rua_pessoa,numero_pessoa,complemento_pessoa,cidade_pessoa,estado_pessoa,cep_pessoa,pais_pessoa,bairro_pessoa) VALUES ('111.333.111-11','Rua Domingao',  69, 'Maragogi', 'Alagoas', 502320165,  'BR','PROJAC');
-INSERT INTO endereco_pessoa (cpf_pessoa, rua_pessoa,numero_pessoa,complemento_pessoa,cidade_pessoa,estado_pessoa,cep_pessoa,pais_pessoa,bairro_pessoa) VALUES ('111.333.222-11','Rua Domingao',  69, 'Maragogi', 'Alagoas', 502320165,  'BR','PROJAC');
-INSERT INTO endereco_pessoa (cpf_pessoa, rua_pessoa,numero_pessoa,complemento_pessoa,cidade_pessoa,estado_pessoa,cep_pessoa,pais_pessoa,bairro_pessoa) VALUES ('111.333.333-11','Rua Domingao',  69, 'Maragogi', 'Alagoas', 502320165,  'BR','PROJAC');
+INSERT INTO endereco_pessoa (cpf_pessoa, rua_pessoa,numero_pessoa,complemento_pessoa,cidade_pessoa,estado_pessoa,cep_pessoa,pais_pessoa,bairro_pessoa) VALUES ('111.222.111-11','Rua Domingao', 69, NULL, 'Maragogi', 'Alagoas', 502320165,  'BR','PROJAC');
+INSERT INTO endereco_pessoa (cpf_pessoa, rua_pessoa,numero_pessoa,complemento_pessoa,cidade_pessoa,estado_pessoa,cep_pessoa,pais_pessoa,bairro_pessoa) VALUES ('111.222.222-11','Rua Domingao', 69, NULL, 'Maragogi', 'Alagoas', 502320165,  'BR','PROJAC');
+INSERT INTO endereco_pessoa (cpf_pessoa, rua_pessoa,numero_pessoa,complemento_pessoa,cidade_pessoa,estado_pessoa,cep_pessoa,pais_pessoa,bairro_pessoa) VALUES ('111.222.333-11','Rua Domingao', 69, NULL, 'Maragogi', 'Alagoas', 502320165,  'BR','PROJAC');
+INSERT INTO endereco_pessoa (cpf_pessoa, rua_pessoa,numero_pessoa,complemento_pessoa,cidade_pessoa,estado_pessoa,cep_pessoa,pais_pessoa,bairro_pessoa) VALUES ('111.222.444-11','Rua Domingao', 69, NULL, 'Maragogi', 'Alagoas', 502320165,  'BR','PROJAC');
+INSERT INTO endereco_pessoa (cpf_pessoa, rua_pessoa,numero_pessoa,complemento_pessoa,cidade_pessoa,estado_pessoa,cep_pessoa,pais_pessoa,bairro_pessoa) VALUES ('111.222.555-11','Rua Domingao', 69, NULL, 'Maragogi', 'Alagoas', 502320165,  'BR','PROJAC');
+INSERT INTO endereco_pessoa (cpf_pessoa, rua_pessoa,numero_pessoa,complemento_pessoa,cidade_pessoa,estado_pessoa,cep_pessoa,pais_pessoa,bairro_pessoa) VALUES ('111.222.666-11','Rua Domingao', 69, NULL, 'Maragogi', 'Alagoas', 502320165,  'BR','PROJAC');
+INSERT INTO endereco_pessoa (cpf_pessoa, rua_pessoa,numero_pessoa,complemento_pessoa,cidade_pessoa,estado_pessoa,cep_pessoa,pais_pessoa,bairro_pessoa) VALUES ('111.222.777-11','Rua Domingao', 69, NULL, 'Maragogi', 'Alagoas', 502320165,  'BR','PROJAC');
+INSERT INTO endereco_pessoa (cpf_pessoa, rua_pessoa,numero_pessoa,complemento_pessoa,cidade_pessoa,estado_pessoa,cep_pessoa,pais_pessoa,bairro_pessoa) VALUES ('111.222.888-11','Rua Domingao', 69, NULL, 'Maragogi', 'Alagoas', 502320165,  'BR','PROJAC');
+INSERT INTO endereco_pessoa (cpf_pessoa, rua_pessoa,numero_pessoa,complemento_pessoa,cidade_pessoa,estado_pessoa,cep_pessoa,pais_pessoa,bairro_pessoa) VALUES ('111.222.999-11','Rua Domingao', 69, NULL, 'Maragogi', 'Alagoas', 502320165,  'BR','PROJAC');
+INSERT INTO endereco_pessoa (cpf_pessoa, rua_pessoa,numero_pessoa,complemento_pessoa,cidade_pessoa,estado_pessoa,cep_pessoa,pais_pessoa,bairro_pessoa) VALUES ('111.333.111-11','Rua Domingao', 69, NULL, 'Maragogi', 'Alagoas', 502320165,  'BR','PROJAC');
+INSERT INTO endereco_pessoa (cpf_pessoa, rua_pessoa,numero_pessoa,complemento_pessoa,cidade_pessoa,estado_pessoa,cep_pessoa,pais_pessoa,bairro_pessoa) VALUES ('111.333.222-11','Rua Domingao', 69, NULL, 'Maragogi', 'Alagoas', 502320165,  'BR','PROJAC');
+
 -- sobrando
 --INSERT INTO pessoa(nome_pessoa,cpf_pessoa,data_nascimento_pessoa,sexo_pessoa,rua_pessoa,numero_pessoa,complemento_pessoa,cidade_pessoa,estado_pessoa,cep_pessoa,pais_pessoa,bairro_pessoa) VALUES ('Germana','111.333.333-11', to_date('05/06/1995', 'dd/mm/yy'),'F'  ,'Rua Domingao',  69, 'Maragogi', 'Alagoas', 502320165,  'BR','PROJAC');
 --INSERT INTO pessoa(nome_pessoa,cpf_pessoa,data_nascimento_pessoa,sexo_pessoa,rua_pessoa,numero_pessoa,complemento_pessoa,cidade_pessoa,estado_pessoa,cep_pessoa,pais_pessoa,bairro_pessoa) VALUES ('Maria',  '111.333.444-11', to_date('04/06/1998', 'dd/mm/yy'),'F'  ,'Rua Domingao',  69, 'Maragogi', 'Alagoas', 502320165,  'BR','PROJAC');
@@ -62,30 +62,30 @@ INSERT INTO cliente (cpf_cliente, numero_cliente, data_associação_cliente) VAL
 INSERT INTO cliente (cpf_cliente, numero_cliente, data_associação_cliente) VALUES ('111.222.111-11', 1111, to_date('06/05/2011', 'dd/mm/yy'));
 
 -- seguradoras
-INSERT INTO seguradora (cnpj_seg, nome_seg) VALUES ('00.555.111/3333-00', 'Seguradora Pane Certa');
-INSERT INTO seguradora (cnpj_seg, nome_seg) VALUES ('00.444.222/4444-01', 'Seguradora Queda Dura');
-INSERT INTO seguradora (cnpj_seg, nome_seg) VALUES ('00.333.333/5555-02', 'Seguradora Carro Seguro');
-INSERT INTO seguradora (cnpj_seg, nome_seg) VALUES ('00.222.444/6666-03', 'Seguradora Seu Automóvel');
-INSERT INTO seguradora (cnpj_seg, nome_seg) VALUES ('00.111.555/7777-04', 'Seguradora Futuro Certo');
+INSERT INTO seguradora (cnpj_seguradora, nome_seguradora) VALUES ('00.555.111/3333-00', 'Seguradora Pane Certa');
+INSERT INTO seguradora (cnpj_seguradora, nome_seguradora) VALUES ('00.444.222/4444-01', 'Seguradora Queda Dura');
+INSERT INTO seguradora (cnpj_seguradora, nome_seguradora) VALUES ('00.333.333/5555-02', 'Seguradora Carro Seguro');
+INSERT INTO seguradora (cnpj_seguradora, nome_seguradora) VALUES ('00.222.444/6666-03', 'Seguradora Seu Automóvel');
+INSERT INTO seguradora (cnpj_seguradora, nome_seguradora) VALUES ('00.111.555/7777-04', 'Seguradora Futuro Certo');
 
 -- endereco_seguradora
-INSERT INTO endereco_seguradora (cnpj_seg, rua_seg, numero_seg, complemento_seg, cidade_seg, estado_seg, cep_seg, pais_seg, bairro_seg) VALUES ('00.555.111/3333-00', 'Rua Paes Cabral',111, NULL, 'Recife', 'PE', 50530111, 'BR', 'Boa Viagem');
-INSERT INTO endereco_seguradora (cnpj_seg, rua_seg, numero_seg, complemento_seg, cidade_seg, estado_seg, cep_seg, pais_seg, bairro_seg) VALUES ('00.444.222/4444-01', 'Rua Firmino de Barros',222, NULL, 'Olinda', 'PE', 50630112, 'BR', 'Rio Doce');
-INSERT INTO endereco_seguradora (cnpj_seg, rua_seg, numero_seg, complemento_seg, cidade_seg, estado_seg, cep_seg, pais_seg, bairro_seg) VALUES ('00.333.333/5555-02', 'Rua Alfredo Becker',333, NULL, 'Jabotão', 'PE', 50730123, 'BR', 'Piedade');
-INSERT INTO endereco_seguradora (cnpj_seg, rua_seg, numero_seg, complemento_seg, cidade_seg, estado_seg, cep_seg, pais_seg, bairro_seg) VALUES ('00.222.444/6666-03', 'Avenida Recife',444, NULL, 'Jabotão', 'PE', 50830134, 'BR', 'Candeias');
-INSERT INTO endereco_seguradora (cnpj_seg, rua_seg, numero_seg, complemento_seg, cidade_seg, estado_seg, cep_seg, pais_seg, bairro_seg) VALUES ('00.111.555/7777-04', 'Rua Arquiteto Luiz Nunes',555, NULL, 'Recife', 'PE', 50930145, 'BR', 'Ipsep');
+INSERT INTO endereco_seguradora (cnpj_seguradora, rua_seguradora, numero_seguradora, complemento_seguradora, cidade_seguradora, estado_seguradora, cep_seguradora, pais_seguradora, bairro_seguradora) VALUES ('00.555.111/3333-00', 'Rua Paes Cabral',111, NULL, 'Recife', 'PE', 50530111, 'BR', 'Boa Viagem');
+INSERT INTO endereco_seguradora (cnpj_seguradora, rua_seguradora, numero_seguradora, complemento_seguradora, cidade_seguradora, estado_seguradora, cep_seguradora, pais_seguradora, bairro_seguradora) VALUES ('00.444.222/4444-01', 'Rua Firmino de Barros',222, NULL, 'Olinda', 'PE', 50630112, 'BR', 'Rio Doce');
+INSERT INTO endereco_seguradora (cnpj_seguradora, rua_seguradora, numero_seguradora, complemento_seguradora, cidade_seguradora, estado_seguradora, cep_seguradora, pais_seguradora, bairro_seguradora) VALUES ('00.333.333/5555-02', 'Rua Alfredo Becker',333, NULL, 'Jabotão', 'PE', 50730123, 'BR', 'Piedade');
+INSERT INTO endereco_seguradora (cnpj_seguradora, rua_seguradora, numero_seguradora, complemento_seguradora, cidade_seguradora, estado_seguradora, cep_seguradora, pais_seguradora, bairro_seguradora) VALUES ('00.222.444/6666-03', 'Avenida Recife',444, NULL, 'Jabotão', 'PE', 50830134, 'BR', 'Candeias');
+INSERT INTO endereco_seguradora (cnpj_seguradora, rua_seguradora, numero_seguradora, complemento_seguradora, cidade_seguradora, estado_seguradora, cep_seguradora, pais_seguradora, bairro_seguradora) VALUES ('00.111.555/7777-04', 'Rua Arquiteto Luiz Nunes',555, NULL, 'Recife', 'PE', 50930145, 'BR', 'Ipsep');
 
 -- funcionarios
-INSERT INTO funcionario (cpf_funcionario, salario_funcionario, pis_funcionario, cnpj_seguradora, cpf_supervisor) VALUES ('111.222.222-11', 2500, 11111111111, '00.555.111/3333-00', '111.222.333-11' );
-INSERT INTO funcionario (cpf_funcionario, salario_funcionario, pis_funcionario, cnpj_seguradora, cpf_supervisor) VALUES ('111.222.333-11', 2500, 11111111111, '00.555.111/3333-00', '111.222.222-11');
-INSERT INTO funcionario (cpf_funcionario, salario_funcionario, pis_funcionario, cnpj_seguradora, cpf_supervisor) VALUES ('111.222.444-11', 2500, 22222222222, '00.444.222/4444-01', '111.222.555-11');
-INSERT INTO funcionario (cpf_funcionario, salario_funcionario, pis_funcionario, cnpj_seguradora, cpf_supervisor) VALUES ('111.222.555-11', 2500, 22222222222, '00.444.222/4444-01', '111.222.444-11' );
-INSERT INTO funcionario (cpf_funcionario, salario_funcionario, pis_funcionario, cnpj_seguradora, cpf_supervisor) VALUES ('111.222.666-11', 2500, 33333333333, '00.333.333/5555-02', '111.222.777-11');
-INSERT INTO funcionario (cpf_funcionario, salario_funcionario, pis_funcionario, cnpj_seguradora, cpf_supervisor) VALUES ('111.222.777-11', 2500, 33333333333, '00.333.333/5555-02', '111.222.666-11' );
-INSERT INTO funcionario (cpf_funcionario, salario_funcionario, pis_funcionario, cnpj_seguradora, cpf_supervisor) VALUES ('111.222.888-11', 2500, 44444444444, '00.222.444/6666-03', '111.222.999-11' );
-INSERT INTO funcionario (cpf_funcionario, salario_funcionario, pis_funcionario, cnpj_seguradora, cpf_supervisor) VALUES ('111.222.999-11', 2500, 44444444444, '00.222.444/6666-03', '111.222.888-11' );
-INSERT INTO funcionario (cpf_funcionario, salario_funcionario, pis_funcionario, cnpj_seguradora, cpf_supervisor) VALUES ('111.333.111-11', 2500, 55555555555, '00.111.555/7777-04', '111.333.222-11' );
-INSERT INTO funcionario (cpf_funcionario, salario_funcionario, pis_funcionario, cnpj_seguradora, cpf_supervisor) VALUES ('111.333.222-11', 2500, 55555555555, '00.111.555/7777-04', '111.333.111-11' );
+INSERT INTO funcionario (cpf_funcionario, salario_funcionario, pis_funcionario, cnpj_seguradora, cpf_supervisor) VALUES ('111.222.222-11', 2500, 11111111111, '00.555.111/3333-00', NULL);
+INSERT INTO funcionario (cpf_funcionario, salario_funcionario, pis_funcionario, cnpj_seguradora, cpf_supervisor) VALUES ('111.222.333-11', 2500, 11111111111, '00.555.111/3333-00', NULL);
+INSERT INTO funcionario (cpf_funcionario, salario_funcionario, pis_funcionario, cnpj_seguradora, cpf_supervisor) VALUES ('111.222.444-11', 2500, 22222222222, '00.444.222/4444-01', NULL);
+INSERT INTO funcionario (cpf_funcionario, salario_funcionario, pis_funcionario, cnpj_seguradora, cpf_supervisor) VALUES ('111.222.555-11', 2500, 22222222222, '00.444.222/4444-01', NULL);
+INSERT INTO funcionario (cpf_funcionario, salario_funcionario, pis_funcionario, cnpj_seguradora, cpf_supervisor) VALUES ('111.222.666-11', 2500, 33333333333, '00.333.333/5555-02', NULL);
+INSERT INTO funcionario (cpf_funcionario, salario_funcionario, pis_funcionario, cnpj_seguradora, cpf_supervisor) VALUES ('111.222.777-11', 2500, 33333333333, '00.333.333/5555-02', NULL);
+INSERT INTO funcionario (cpf_funcionario, salario_funcionario, pis_funcionario, cnpj_seguradora, cpf_supervisor) VALUES ('111.222.888-11', 2500, 44444444444, '00.222.444/6666-03', NULL);
+INSERT INTO funcionario (cpf_funcionario, salario_funcionario, pis_funcionario, cnpj_seguradora, cpf_supervisor) VALUES ('111.222.999-11', 2500, 44444444444, '00.222.444/6666-03', NULL);
+INSERT INTO funcionario (cpf_funcionario, salario_funcionario, pis_funcionario, cnpj_seguradora, cpf_supervisor) VALUES ('111.333.111-11', 2500, 55555555555, '00.111.555/7777-04', NULL);
+INSERT INTO funcionario (cpf_funcionario, salario_funcionario, pis_funcionario, cnpj_seguradora, cpf_supervisor) VALUES ('111.333.222-11', 2500, 55555555555, '00.111.555/7777-04', NULL);
 
 -- dependentes
 INSERT INTO dependente (cpf_cliente,numero_dependente,nome_dependente,sexo_dependente,data_nascimento_dependente) VALUES ('111.111.111-11',0000,'Maria Antoniet','M',to_date('18/10/1992','dd/mm/yy'));
@@ -105,11 +105,11 @@ INSERT INTO dependente (cpf_cliente,numero_dependente,nome_dependente,sexo_depen
 INSERT INTO dependente (cpf_cliente,numero_dependente,nome_dependente,sexo_dependente,data_nascimento_dependente) VALUES ('111.111.999-11',3333,'Luana Queiroga','M',to_date('15/10/1990','dd/mm/yy'));
 
 -- telefone-seguradora
-INSERT INTO telefone_seguradora (cnpj_seguradora,ddd_seguradora,numero_telefone_seguradora) VALUES ('00.555.111/3333-00',081,'1122-3344');
-INSERT INTO telefone_seguradora (cnpj_seguradora,ddd_seguradora,numero_telefone_seguradora) VALUES ('00.444.222/4444-01',011,'5566-7788');
-INSERT INTO telefone_seguradora (cnpj_seguradora,ddd_seguradora,numero_telefone_seguradora) VALUES ('00.333.333/5555-02',021,'9900-1122');
-INSERT INTO telefone_seguradora (cnpj_seguradora,ddd_seguradora,numero_telefone_seguradora) VALUES ('00.222.444/6666-03',081,'3344-5566');
-INSERT INTO telefone_seguradora (cnpj_seguradora,ddd_seguradora,numero_telefone_seguradora) VALUES ('00.111.555/7777-04',011,'7788-9900');
+INSERT INTO telefone_seguradora (cnpj_seguradora,DDD_seguradora,numero_telefone_seguradora) VALUES ('00.555.111/3333-00',081,'1122-3344');
+INSERT INTO telefone_seguradora (cnpj_seguradora,DDD_seguradora,numero_telefone_seguradora) VALUES ('00.444.222/4444-01',011,'5566-7788');
+INSERT INTO telefone_seguradora (cnpj_seguradora,DDD_seguradora,numero_telefone_seguradora) VALUES ('00.333.333/5555-02',021,'9900-1122');
+INSERT INTO telefone_seguradora (cnpj_seguradora,DDD_seguradora,numero_telefone_seguradora) VALUES ('00.222.444/6666-03',081,'3344-5566');
+INSERT INTO telefone_seguradora (cnpj_seguradora,DDD_seguradora,numero_telefone_seguradora) VALUES ('00.111.555/7777-04',011,'7788-9900');
 
 -- telefone-pessoa
 INSERT INTO telefone_pessoa (cpf_pessoa, DDD_pessoa, numero_telefone_pessoa) VALUES ('111.111.111-11', 081, '99586-7862');
@@ -139,6 +139,7 @@ INSERT INTO automovel (renavam, placa, modelo, marca, cpf_cliente) VALUES (11219
 INSERT INTO automovel (renavam, placa, modelo, marca, cpf_cliente) VALUES (21492654515, 'LMS7347', 'Onix', 'GM', '111.111.555-11');
 INSERT INTO automovel (renavam, placa, modelo, marca, cpf_cliente) VALUES (31998473660, 'AMG0158', 'Huayra', 'Pagani', '111.111.111-11');
 
+--casualidade
 INSERT INTO casualidade (codigo_acidente, data_acidente, tipo_acidente) VALUES (1653,to_date('25/12/2018', 'dd/mm/yy'), 'G');
 INSERT INTO casualidade (codigo_acidente, data_acidente, tipo_acidente) VALUES (2353,to_date('09/01/2016', 'dd/mm/yy'), 'L');
 INSERT INTO casualidade (codigo_acidente, data_acidente, tipo_acidente) VALUES (5897,to_date('18/11/2015', 'dd/mm/yy'), 'M');
@@ -150,6 +151,7 @@ INSERT INTO casualidade (codigo_acidente, data_acidente, tipo_acidente) VALUES (
 INSERT INTO casualidade (codigo_acidente, data_acidente, tipo_acidente) VALUES (9284,to_date('30/01/2019', 'dd/mm/yy'), 'G');
 INSERT INTO casualidade (codigo_acidente, data_acidente, tipo_acidente) VALUES (3818,to_date('02/11/2010', 'dd/mm/yy'), 'R');
 
+-- cobre
 INSERT INTO cobre (codigo_acidente, cnpj_seguradora, renavam, cpf_cliente) VALUES (1653, '00.555.111/3333-00', 31998473660, '111.111.111-11');
 INSERT INTO cobre (codigo_acidente, cnpj_seguradora, renavam, cpf_cliente) VALUES (2353, '00.444.222/4444-01', 21492654515, '111.111.555-11');
 INSERT INTO cobre (codigo_acidente, cnpj_seguradora, renavam, cpf_cliente) VALUES (5897, '00.333.333/5555-02', 11219653349, '111.111.444-11');
