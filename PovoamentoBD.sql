@@ -130,3 +130,14 @@ INSERT INTO cobre (casualidade, seguradora, automovel, cpf_cliente) VALUES (9687
 INSERT INTO cobre (casualidade, seguradora, automovel, cpf_cliente) VALUES (1385, '00.333.333/5555-02', 57762423982, '111.111.888-11');
 INSERT INTO cobre (casualidade, seguradora, automovel, cpf_cliente) VALUES (9284, '00.222.444/6666-03', 13419152477, '111.111.777-11');
 INSERT INTO cobre (casualidade, seguradora, automovel, cpf_cliente) VALUES (3818, '00.111.555/7777-04', 17893434104, '111.111.666-11');
+
+INSERT INTO cliente_seguradora (cnpj_contratada, cpf_cliente, data_contratacao, anuidade, franquia, cobertura) VALUES ('00.555.111/3333-00', '111.111.111-11', 1300, 750, A);
+INSERT INTO cliente_seguradora (cnpj_contratada, cpf_cliente, data_contratacao, anuidade, franquia, cobertura) VALUES ('00.555.111/3333-00', '111.111.222-11', 1250, 850, A);
+INSERT INTO cliente_seguradora (cnpj_contratada, cpf_cliente, data_contratacao, anuidade, franquia, cobertura) VALUES ('00.555.111/3333-00', '111.111.333-11', 950, 999, B);
+INSERT INTO cliente_seguradora (cnpj_contratada, cpf_cliente, data_contratacao, anuidade, franquia, cobertura) VALUES ('00.444.222/4444-01', '111.111.444-11', 1000, 1200, B);
+INSERT INTO cliente_seguradora (cnpj_contratada, cpf_cliente, data_contratacao, anuidade, franquia, cobertura) VALUES ('00.444.222/4444-01', '111.111.555-11', 1500, 1000, B);
+INSERT INTO cliente_seguradora (cnpj_contratada, cpf_cliente, data_contratacao, anuidade, franquia, cobertura) VALUES ('00.444.222/4444-01', '111.111.666-11', 1770, 1500, C);
+INSERT INTO cliente_seguradora (cnpj_contratada, cpf_cliente, data_contratacao, anuidade, franquia, cobertura) VALUES ('00.333.333/5555-02', '111.111.777-11', 2000, 1750, D);
+INSERT INTO cliente_seguradora (cnpj_contratada, cpf_cliente, data_contratacao, anuidade, franquia, cobertura) VALUES ('00.222.444/6666-03', '111.111.888-11', 2200, 1900, D);
+INSERT INTO cliente_seguradora (cnpj_contratada, cpf_cliente, data_contratacao, anuidade, franquia, cobertura) VALUES ('00.222.444/6666-03', '111.111.999-11', 2500, 1900, D);
+INSERT INTO cliente_seguradora (cnpj_contratada, cpf_cliente, data_contratacao, anuidade, franquia, cobertura) VALUES ('00.111.555/7777-04', '111.222.111-11', 3333, 2500, E);
