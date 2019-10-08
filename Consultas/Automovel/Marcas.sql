@@ -16,3 +16,9 @@ from automovel A
         ON C.cpf_cliente = P.cpf_pessoa
 where A.marca = 'Pagani'
 order by P.nome_pessoa
+
+-- Group by Marcas
+
+select COUNT(renavam), marca
+FROM automovel
+GROUP BY marca
