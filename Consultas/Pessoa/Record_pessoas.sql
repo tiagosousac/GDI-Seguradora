@@ -1,5 +1,5 @@
 DECLARE
-     info_pessoa pesssoa%ROWTYPE;
+     info_pessoa pessoa%ROWTYPE;
 BEGIN
      info_pessoa.cpf_pessoa	 := '222.111.222-11';
      info_pessoa.nome_pessoa	 := 'Juãozinho';
