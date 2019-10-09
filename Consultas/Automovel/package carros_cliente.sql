@@ -10,9 +10,12 @@ create or replace FUNCTION get_cars(target_cpf IN VARCHAR2)
       FROM pessoa P, automovel A
       WHERE P.cpf_pessoa = target_cpf 
       AND A.cpf_cliente = target_cpf;
-
+    
       RETURN(pessoa_carros); 
-
+      
+    EXCEPTION
+      WHEN no_data_found THEN
+         dbms_output.put_line('CPF não existe!'); 
     END get_cars;
 /
 -- Recebe cliente e devolve suas placas
