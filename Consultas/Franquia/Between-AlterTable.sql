@@ -1,5 +1,5 @@
 ALTER TABLE cliente_seguradora
-DROP franquia;
+DROP COLUMN franquia;
 
 SELECT * FROM cliente_seguradora
 WHERE anuidade BETWEEN 900 AND 1500;
