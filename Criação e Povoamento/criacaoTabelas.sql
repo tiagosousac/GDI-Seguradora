@@ -32,6 +32,7 @@ CREATE TABLE cliente (
     data_associação_cliente DATE NOT NULL,
     CONSTRAINT cliente_pk PRIMARY KEY (cpf_cliente),
     CONSTRAINT cliente_fk FOREIGN KEY (cpf_cliente) REFERENCES pessoa (cpf_pessoa)
+    ON DELETE CASCADE
 );
  
 CREATE TABLE automovel (
@@ -42,6 +43,7 @@ CREATE TABLE automovel (
    cpf_cliente VARCHAR2(14),
    CONSTRAINT automovel_pk PRIMARY KEY (renavam),
    CONSTRAINT automovel_cpf_dono_fk FOREIGN KEY (cpf_cliente) REFERENCES cliente (cpf_cliente)
+   ON DELETE CASCADE
 );
  
 CREATE TABLE casualidade (
@@ -57,6 +59,7 @@ CREATE TABLE telefone_pessoa (
     numero_telefone_pessoa VARCHAR2(10) NOT NULL,
     CONSTRAINT telefone_pessoa_pk PRIMARY KEY (cpf_pessoa, DDD_pessoa, numero_telefone_pessoa),
     CONSTRAINT telefone_pessoa_fk FOREIGN KEY (cpf_pessoa) REFERENCES pessoa (cpf_pessoa)
+    ON DELETE CASCADE
 );
  
 CREATE TABLE dependente (
@@ -67,6 +70,7 @@ CREATE TABLE dependente (
     data_nascimento_dependente DATE NOT NULL,
     CONSTRAINT dependente PRIMARY KEY (cpf_cliente, numero_dependente),
     CONSTRAINT dependente_fk FOREIGN KEY (cpf_cliente) REFERENCES cliente (cpf_cliente)
+    ON DELETE CASCADE
 );
  
 CREATE TABLE funcionario (
@@ -78,6 +82,7 @@ CREATE TABLE funcionario (
    CONSTRAINT funcionario_pk PRIMARY KEY (cpf_funcionario),
    CONSTRAINT funcionario_cpf_func_fk FOREIGN KEY (cpf_funcionario) REFERENCES pessoa (cpf_pessoa),
    CONSTRAINT funcionario_cpf_superv_fk FOREIGN KEY (cpf_supervisor) REFERENCES funcionario (cpf_funcionario)
+   ON DELETE CASCADE
 );
  
  
@@ -91,6 +96,7 @@ CREATE TABLE cobre (
     CONSTRAINT dependente_seguradora_fk FOREIGN KEY (cnpj_seguradora) REFERENCES seguradora (cnpj_seguradora),
     CONSTRAINT dependente_automovel_fk FOREIGN KEY (renavam) REFERENCES automovel (renavam),
     CONSTRAINT dependente_cpf_cliente_fk FOREIGN KEY (cpf_cliente) REFERENCES cliente (cpf_cliente)
+    ON DELETE CASCADE
 );
  
 CREATE TABLE telefone_seguradora (
@@ -99,6 +105,7 @@ CREATE TABLE telefone_seguradora (
     numero_telefone_seguradora VARCHAR2(10) NOT NULL,
     CONSTRAINT telefones_seguradora_pk PRIMARY KEY (cnpj_seguradora, DDD_seguradora, numero_telefone_seguradora),
     CONSTRAINT telefones_seguradora_seguradora_fk FOREIGN KEY (cnpj_seguradora) REFERENCES seguradora (cnpj_seguradora)
+    ON DELETE CASCADE
 );
  
 CREATE TABLE cliente_seguradora (
@@ -111,6 +118,7 @@ CREATE TABLE cliente_seguradora (
    CONSTRAINT cliente_seguradora_pk PRIMARY KEY (cnpj_seguradora, cpf_cliente),
    CONSTRAINT cliente_seguradora_cpf_pk FOREIGN KEY (cpf_cliente) REFERENCES cliente (cpf_cliente),
    CONSTRAINT cliente_seguradora_cnpj_pk FOREIGN KEY (cnpj_seguradora) REFERENCES seguradora (cnpj_seguradora)
+   ON DELETE CASCADE
 );
 
 CREATE TABLE endereco_pessoa (
@@ -125,6 +133,7 @@ CREATE TABLE endereco_pessoa (
     bairro_pessoa VARCHAR2(20),
     CONSTRAINT endereco_pessoa_pḱ PRIMARY KEY (cpf_pessoa, cep_pessoa),
     CONSTRAINT endereco_pessoa_fk FOREIGN KEY (cpf_pessoa) REFERENCES pessoa (cpf_pessoa)
+    ON DELETE CASCADE
 );
 
 CREATE TABLE endereco_seguradora (
@@ -139,4 +148,5 @@ CREATE TABLE endereco_seguradora (
     bairro_seguradora VARCHAR2(20),
     CONSTRAINT endereco_seguradora_pḱ PRIMARY KEY (cnpj_seguradora, cep_seguradora),
     CONSTRAINT endereco_seguradora_fk FOREIGN KEY (cnpj_seguradora) REFERENCES seguradora (cnpj_seguradora)
+    ON DELETE CASCADE
 );
