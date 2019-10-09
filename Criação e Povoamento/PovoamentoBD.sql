@@ -70,14 +70,14 @@ INSERT INTO seguradora (cnpj_seguradora, nome_seguradora) VALUES ('00.222.444/66
 INSERT INTO seguradora (cnpj_seguradora, nome_seguradora) VALUES ('00.111.555/7777-04', 'Seguradora Futuro Certo');
 
 -- endereco_seguradora
-INSERT INTO endereco_seguradora (cnpj_seguradora, rua_seguradora, numero_seguradora, complemento_seguradora, cidade_seguradora, estado_seguradora, cep_seguradora, pais_seguradora, bairro_seguradora) VALUES ('00.555.111/3333-00', 'Rua Paes Cabral',111, NULL, 'Recife', 'PE', 50530111, 'BR', 'Boa Viagem');
+INSERT INTO endereco_seguradora (cnpj_seguradora, rua_seguradora, numero_seguradora, complemento_seguradora, cidade_seguradora, estado_seguradora, cep_seguradora, pais_seguradora, bairro_seguradora) VALUES ('00.555.111/3333-00', 'Rua Paes Cabral',111, NULL, c, 'PE', 50530111, 'BR', 'Boa Viagem');
 INSERT INTO endereco_seguradora (cnpj_seguradora, rua_seguradora, numero_seguradora, complemento_seguradora, cidade_seguradora, estado_seguradora, cep_seguradora, pais_seguradora, bairro_seguradora) VALUES ('00.444.222/4444-01', 'Rua Firmino de Barros',222, NULL, 'Olinda', 'PE', 50630112, 'BR', 'Rio Doce');
 INSERT INTO endereco_seguradora (cnpj_seguradora, rua_seguradora, numero_seguradora, complemento_seguradora, cidade_seguradora, estado_seguradora, cep_seguradora, pais_seguradora, bairro_seguradora) VALUES ('00.333.333/5555-02', 'Rua Alfredo Becker',333, NULL, 'Jabotão', 'PE', 50730123, 'BR', 'Piedade');
 INSERT INTO endereco_seguradora (cnpj_seguradora, rua_seguradora, numero_seguradora, complemento_seguradora, cidade_seguradora, estado_seguradora, cep_seguradora, pais_seguradora, bairro_seguradora) VALUES ('00.222.444/6666-03', 'Avenida Recife',444, NULL, 'Jabotão', 'PE', 50830134, 'BR', 'Candeias');
 INSERT INTO endereco_seguradora (cnpj_seguradora, rua_seguradora, numero_seguradora, complemento_seguradora, cidade_seguradora, estado_seguradora, cep_seguradora, pais_seguradora, bairro_seguradora) VALUES ('00.111.555/7777-04', 'Rua Arquiteto Luiz Nunes',555, NULL, 'Recife', 'PE', 50930145, 'BR', 'Ipsep');
 
 -- funcionarios
-INSERT INTO funcionario (cpf_funcionario, salario_funcionario, pis_funcionario, cnpj_seguradora, cpf_supervisor) VALUES ('111.222.222-11', 2500, 11111111111, '00.555.111/3333-00', NULL);
+INSERT INTO funcionario (cpf_funcionario, salario_funcionario, pis_funcionario, cnpj_seguradora, cpf_supervisor) VALUES ('111.222.222-11', 3500, 11111111111, '00.555.111/3333-00', NULL);
 INSERT INTO funcionario (cpf_funcionario, salario_funcionario, pis_funcionario, cnpj_seguradora, cpf_supervisor) VALUES ('111.222.333-11', 2500, 11111111111, '00.555.111/3333-00', NULL);
 INSERT INTO funcionario (cpf_funcionario, salario_funcionario, pis_funcionario, cnpj_seguradora, cpf_supervisor) VALUES ('111.222.444-11', 2500, 22222222222, '00.444.222/4444-01', NULL);
 INSERT INTO funcionario (cpf_funcionario, salario_funcionario, pis_funcionario, cnpj_seguradora, cpf_supervisor) VALUES ('111.222.555-11', 2500, 22222222222, '00.444.222/4444-01', NULL);
