@@ -3,26 +3,26 @@ UPDATE pessoa
     SET nome_pessoa = 'João',
 	sexo_pessoa = 'M',
 	data_nascimento_pessoa = to_date('03/02/1998','dd/mm/yyyy')
-    WHERE cpf_pessoa = '111.111.999-11'
+    WHERE cpf_pessoa = '111.111.999-11';
 
 UPDATE pessoa 
-   SET nome_pesssoa = 'João'
-   WHERE cpf_pessoa = '111.111.999-11'
+   SET nome_pessoa = 'João'
+   WHERE cpf_pessoa = '111.111.999-11';
 
 UPDATE pessoa 
    SET sexo_pessoa = 'M'
-   WHERE cpf_pessoa = '111.111.999-11'
+   WHERE cpf_pessoa = '111.111.999-11';
 
 UPDATE pessoa
    SET data_nascimento_pessoa = to_date('03/02/1998','dd/mm/yyyy')
-   WHERE cpf_pessoa = '111.111.999-11'
+   WHERE cpf_pessoa = '111.111.999-11';
 
 -- ### FIM ATUALIZACAO PESSOA ###
 
 -- atualização do nome da seguradora
 UPDATE seguradora
    SET nome_seguradora = 'Seguradora Queda Dura'
-   WHERE cnpj_seguradora = '00.555.111/3333-00'
+   WHERE cnpj_seguradora = '00.555.111/3333-00';
 
 -- com relação a tabela cliente, temos que o CPF do cliente não pode ser alterado, juntamente com o número do cliente que é gerado toda vez que um novo cliente é criado e a data de associação do cliente não pode ser alterada também.
 
@@ -32,45 +32,43 @@ UPDATE seguradora
 
 -- atualização do telefone de contato
 UPDATE telefone_pessoa
-    SET num_telefone = '988819765'
+    SET numero_telefone_pessoa = '988819765',
 	DDD_pessoa = 081
-    WHERE pessoa = '111.111.111-11'
+    WHERE cpf_pessoa = '111.111.111-11';
 
 -- atualização do endereço da pessoa
 UPDATE endereco_pessoa
-    SET	numero_pessoa = '73',
-    WHERE cpf_pessoa = '111.111.333-11'
+    SET	numero_pessoa = '73'
+    WHERE cpf_pessoa = '111.111.333-11';
 
 UPDATE dependente
     SET nome_dependente = 'Mario',
 	sexo_dependente = 'H',
 	data_nascimento_dependente = to_date('02/03/1995','dd/mm/yyyy')
-    WHERE cpf_cliente = '111.111.111-11'
+    WHERE cpf_cliente = '111.111.111-11';
 
 UPDATE funcionario
     SET salario_funcionario = 3500,
-	pis_funcionario = 22222222222
+	pis_funcionario = 22222222222,
 	cnpj_seguradora = '00.555.111/3333-00',
 	cpf_supervisor = '111.222.333-11'
-    WHERE cpf_funcionario = '111.222.222-11'
+    WHERE cpf_funcionario = '111.222.222-11';
 
 UPDATE funcionario
     SET cpf_supervisor = '111.222.555-11'
-    WHERE cpf_funcionario = '111.222.222-11'
+    WHERE cpf_funcionario = '111.222.222-11';
 
 UPDATE cobre
     SET codigo_acidente = 8852
     WHERE codigo_acidente = 1653
     AND cnpj_seguradora = '00.555.111/3333-00'
     AND renavam = 31998473660
-    AND cpf_cliente = '111.111.111-11'
+    AND cpf_cliente = '111.111.111-11';
 
 UPDATE telefone_seguradora
     SET DDD_seguradora = 081,
 	numero_telefone_seguradora = '5566-7788'
-    WHERE cnpj_seguradora = '00.555.111/3333-00'
-    AND DDD_seguradora = 081
-    AND telefone_seguradora = '1122-3344'
+    WHERE cnpj_seguradora = '00.555.111/3333-00';
 
 -- atualização da cobrança do cliente
 UPDATE cliente_seguradora
@@ -81,14 +79,14 @@ UPDATE cliente_seguradora
 	franquia = 1200,
 	cobertura = 'B'
     WHERE cnpj_seguradora = '00.555.111/3333-00'
-    AND cpf_cliente = '111.111.111-11'
+    AND cpf_cliente = '111.111.111-11';
 
 UPDATE cliente_seguradora
     SET anuidade = 1250,
 	franquia = 850,
 	cobertura = 'A'
     WHERE cpf_cliente = '111.111.111-11'
-    AND	cnpj_seguradora = '00.555.111/3333-00'
+    AND	cnpj_seguradora = '00.555.111/3333-00';
 
 UPDATE endereco_pessoa
     SET cep_pessoa = '35033500',
@@ -99,12 +97,12 @@ UPDATE endereco_pessoa
 	estado_pessoa = 'Estado do presunto',
 	pais_pessoa = 'VC',
 	bairro_pessoa = 'Pátio da frente'
-    WHERE cpf_pessoa = '111.111.333-11'
+    WHERE cpf_pessoa = '111.111.333-11';
 
 
 UPDATE endereco_pessoa
     SET	numero_pessoa = '73'
-    WHERE cpf_pessoa = '111.111.333-11'
+    WHERE cpf_pessoa = '111.111.333-11';
 
 -- atualização do endereço da seguradora
 UPDATE endereco_seguradora
@@ -116,9 +114,8 @@ UPDATE endereco_seguradora
 	estado_seguradora = 'PE',
 	pais_seguradora = 'BR',
 	bairro_seguradora = 'Rio Doce'
-    WHERE cnpj_seguradora = '00.555.111/3333-00'
+    WHERE cnpj_seguradora = '00.555.111/3333-00';
 
 UPDATE endereco_seguradora
     SET numero_seguradora = 222
-    WHERE cnpj_seguradora = '00.555.111/3333-00'
-
+    WHERE cnpj_seguradora = '00.555.111/3333-00';
