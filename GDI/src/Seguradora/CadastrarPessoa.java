@@ -49,7 +49,7 @@ public class CadastrarPessoa extends JFrame{
                     addPessoa.execute(INSERT_INTO_PESSOA);
 
                 } catch (SQLException e2) {
-                    System.out.println(e2.getMessage());
+                    JOptionPane.showMessageDialog(null, e2.getMessage());
                 }
 
             }

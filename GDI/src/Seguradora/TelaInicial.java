@@ -27,12 +27,6 @@ public class TelaInicial {
                 cadastrarPessoaFrame.setMinimumSize(new Dimension(500,500));
             }
         });
-        cadastrarSeguradoraButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-            }
-        });
     }
 
     public static void main(String[] args) {
