@@ -27,6 +27,16 @@ public class TelaInicial {
                 cadastrarPessoaFrame.setMinimumSize(new Dimension(500,500));
             }
         });
+        cadastrarSeguradoraButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                JFrame cadastrarSeguradoraFrame = new JFrame("cadastrar Seguradora");
+                cadastrarSeguradoraFrame.setContentPane(new CadastrarSeguradora(connection).CadastroSeguradora);
+                cadastrarSeguradoraFrame.pack();
+                cadastrarSeguradoraFrame.setVisible(true);
+                cadastrarSeguradoraFrame.setMinimumSize(new Dimension(400,400));
+            }
+        });
     }
 
     public static void main(String[] args) {
