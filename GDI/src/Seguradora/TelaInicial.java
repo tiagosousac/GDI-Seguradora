@@ -27,17 +27,19 @@ public class TelaInicial {
                 cadastrarPessoaFrame.setMinimumSize(new Dimension(500,500));
             }
         });
-        cadastrarSeguradoraButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-            }
-        });
     }
 
     public static void main(String[] args) {
         Connection connection;
         try {
+            /* IMPORTANTE !
+               O driver que está sendo utilizado é o mais recente, e seu nome é ojdbc8.jar.
+               Ele é o default pois é o que funciona nos PCs do grad.
+               Caso esteja acontecendo algum erro relacionado a ele, recomendo trocar pel ojdbc10.jar,
+               que está na mesma pasta( GDI-Seguradora/GDI/dependencies ) que o ojdbc8.jar, mas não está incluso no projeto.
+               Para incluir, clica em File->Project Structure->Modules, deleta o import do ojdbc8.jar e
+               clica no + -> JAR or directories e seleciona o ojdbc10.jar.
+             */
             DriverManager.registerDriver (new oracle.jdbc.driver.OracleDriver());
             //Class.forName("oracle.jdbc.driver.OracleDriver");
             connection = DriverManager.getConnection("jdbc:oracle:thin:@oracle12c.cin.ufpe.br:1521:Instance01", "g192if685cc_eq09", "ttexdesz");
