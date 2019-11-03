@@ -14,6 +14,8 @@ public class TelaInicial {
     public JButton consultarButton;
     public JButton cadastrarPessoaButton;
     public JPanel TelaInicial;
+    private JButton inserirImagemButton;
+    private JButton mostrarImagemButton;
 
     public TelaInicial() {
 
@@ -36,6 +38,26 @@ public class TelaInicial {
                 consultarFrame.pack();
                 consultarFrame.setVisible(true);
                 consultarFrame.setMinimumSize(new Dimension(500,500));
+            }
+        });
+        inserirImagemButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                JFrame addImagemFrame = new JFrame("Adicionar imagem");
+                addImagemFrame.setContentPane(new CadastrarBlob().BlobPanel);
+                addImagemFrame.pack();
+                addImagemFrame.setVisible(true);
+                addImagemFrame.setMinimumSize(new Dimension(500,500));
+            }
+        });
+        mostrarImagemButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                JFrame showImagemFrame = new JFrame("Mostrar imagem");
+                showImagemFrame.setContentPane(new MostrarImagem().showImagePanel);
+                showImagemFrame.pack();
+                showImagemFrame.setVisible(true);
+                showImagemFrame.setMinimumSize(new Dimension(500,500));
             }
         });
     }
