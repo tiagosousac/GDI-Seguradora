@@ -1,6 +1,7 @@
 package Consultas;
 
 import javax.swing.*;
+import javax.swing.plaf.nimbus.State;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import java.awt.event.ActionEvent;
@@ -8,26 +9,29 @@ import java.awt.event.ActionListener;
 import java.sql.*;
 import java.util.Vector;
 
+import Operações.Operações;
+
 public class Consultas extends JFrame{
     public JTextField textField1;
     public JButton consultarButton;
     public JPanel consultas;
     private JScrollPane scrollPane;
     public JTable table1;
-    public Connection connection;
+    private Operações ap;
 
-    public Consultas(Connection connection){
-        this.connection = connection;
-
+    public Consultas(){
+        ap = new Operações();
         consultarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 try {
+                    Connection connection = ap.getConexao();
                     String codigoConsulta = textField1.getText();
                     Statement consulta = connection.createStatement();
 
                     ResultSet result = consulta.executeQuery(codigoConsulta);
                     table1.setModel(buildTableModel(result));
+                    ap.fechaConexao(connection, consulta, result);
                 } catch (SQLException e2) {
                     JOptionPane.showMessageDialog(null, e2.getMessage());
                 }

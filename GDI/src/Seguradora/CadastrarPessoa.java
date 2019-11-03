@@ -1,74 +1,122 @@
 package Seguradora;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.sql.Statement;
+
+import Operações.Operações;
 
 public class CadastrarPessoa extends JFrame{
-    public JTextField textField1;
-    public JTextField textField2;
-    public JRadioButton masculinoRadioButton;
-    public JRadioButton femininoRadioButton;
-    public JButton continuarButton;
-    public JRadioButton funcionárioRadioButton;
-    public JRadioButton clienteRadioButton;
     public JPanel CadastrarPessoa;
-    private JComboBox comboBox1;
-    private JComboBox comboBox2;
-    private JComboBox comboBox3;
-    public Connection connection;
+    private JButton incluirButton;
+    private JButton alterarButton;
+    private JButton excluirButton;
+    private JButton limparButton;
+    private JTextField cpfTextField;
+    private JTextField nomeTextField;
+    private JRadioButton masculinoRadioButton;
+    private JRadioButton femininoRadioButton;
+    private JComboBox comboBoxDias;
+    private JComboBox comboBoxMes;
+    private JComboBox comboBoxAnos;
+    private JButton buscarButton;
+    public Operações ap;
 
-    public CadastrarPessoa(Connection connection) {
-        this.connection = connection;
+    public CadastrarPessoa() {
+        ap = new Operações();
         // setando combobox dos dias
         String[] dias = getDias();
         DefaultComboBoxModel dias_modelo = new DefaultComboBoxModel(dias);
-        comboBox1.setModel(dias_modelo);
+        comboBoxDias.setModel(dias_modelo);
 
         // setando combobox dos meses
         String[] meses = getMeses();
         DefaultComboBoxModel meses_modelo = new DefaultComboBoxModel(meses);
-        comboBox2.setModel(meses_modelo);
+        comboBoxMes.setModel(meses_modelo);
 
         // setando combobox dos dias
         String[] anos = getAnos();
         DefaultComboBoxModel anos_modelo = new DefaultComboBoxModel(anos);
-        comboBox3.setModel(anos_modelo);
-
-        continuarButton.addActionListener(new ActionListener() {
+        comboBoxAnos.setModel(anos_modelo);
+        
+        buscarButton.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(ActionEvent actionEvent) {
                 try {
-                    String INSERT_INTO_PESSOA = "INSERT INTO pessoa(nome_pessoa,cpf_pessoa,data_nascimento_pessoa,sexo_pessoa) VALUES ('" + textField1.getText()
-                            + "','" + textField2.getText() + "'," + getDate() + "," + getSexo() + ")";
-                    Statement addPessoa = connection.createStatement();
-                    addPessoa.execute(INSERT_INTO_PESSOA);
+                    String[] pessoaBuscada = ap.BuscarPessoa(BotarAspas(cpfTextField.getText()));
+                    nomeTextField.setText(pessoaBuscada[0]);
+                    System.out.println(pessoaBuscada[3]);
+                    if (pessoaBuscada[3].equals("M")) {
+                        femininoRadioButton.setSelected(false);
+                        masculinoRadioButton.setSelected(true);
+                    } else if (pessoaBuscada[3].equals("F")) {
+                        masculinoRadioButton.setSelected(false);
+                        femininoRadioButton.setSelected(true);
+                    }
+                    String ano = pessoaBuscada[2].substring(0, 4);
+                    comboBoxAnos.setSelectedIndex(IsInArray(anos, ano));
 
-                } catch (SQLException e2) {
-                    JOptionPane.showMessageDialog(null, e2.getMessage());
+                    String mes = pessoaBuscada[2].substring(5, 7);
+                    if (mes.charAt(0) == '0') mes = mes.substring(1);
+                    comboBoxMes.setSelectedIndex(IsInArray(meses, mes));
+
+                    String dia = pessoaBuscada[2].substring(8, 10);
+                    if (dia.charAt(0) == '0') dia = dia.substring(1);
+                    comboBoxDias.setSelectedIndex(IsInArray(dias, dia));
+                } catch (NullPointerException e) {
+                    JOptionPane.showMessageDialog(null, "Este cpf não está cadastrado.");
                 }
-
             }
         });
-
+        incluirButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                String cpf_pessoa = BotarAspas(cpfTextField.getText());
+                String nome_pessoa = BotarAspas(nomeTextField.getText());
+                String data = getDate();
+                String sexo = getSexo();
+                ap.InserirPessoa(nome_pessoa,cpf_pessoa, data, sexo);
+            }
+        });
+        alterarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                String cpf_pessoa = BotarAspas(cpfTextField.getText());
+                String nome_pessoa = BotarAspas(nomeTextField.getText());
+                String data = getDate();
+                String sexo = getSexo();
+                ap.EditarPessoa(nome_pessoa,cpf_pessoa, data, sexo);
+            }
+        });
+        excluirButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                String cpf_pessoa = BotarAspas(cpfTextField.getText());
+                ap.RemoverPessoa(cpf_pessoa);
+            }
+        });
+        limparButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                nomeTextField.setText("");
+                cpfTextField.setText("");
+                masculinoRadioButton.setSelected(false);
+                femininoRadioButton.setSelected(false);
+                comboBoxDias.setSelectedIndex(0);
+                comboBoxMes.setSelectedIndex(0);
+                comboBoxAnos.setSelectedIndex(0);
+            }
+        });
         masculinoRadioButton.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e) {
-                if(femininoRadioButton.isSelected()) {
-                    femininoRadioButton.setSelected(false);
-                }
+            public void actionPerformed(ActionEvent actionEvent) {
+                if(masculinoRadioButton.isSelected()) femininoRadioButton.setSelected(false);
             }
         });
         femininoRadioButton.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e) {
-                if(masculinoRadioButton.isSelected()) {
-                    masculinoRadioButton.setSelected(false);
-                }
+            public void actionPerformed(ActionEvent actionEvent) {
+                if(femininoRadioButton.isSelected()) masculinoRadioButton.setSelected(false);
             }
         });
     }
@@ -108,18 +156,21 @@ public class CadastrarPessoa extends JFrame{
         }
     }
 
-    private String getDate() {
-        return "to_date('" + comboBox1.getSelectedItem() + "/" + comboBox2.getSelectedItem() + "/" + comboBox3.getSelectedItem() + "','dd/mm/yyyy')";
+    private String BotarAspas(String str) {
+        return "'" + str + "'";
     }
 
-    /*public static void main(String[] args) {
-        CadastrarPessoa teste = new CadastrarPessoa();
-        JFrame aham = new JFrame();
-        aham.setContentPane(teste.CadastrarPessoa);
-        aham.pack();
-        aham.setVisible(true);
-        aham.setMinimumSize(new Dimension(500,500));
+    private String getDate() {
+        return "to_date('" + comboBoxDias.getSelectedItem() + "/" + comboBoxMes.getSelectedItem() + "/" + comboBoxAnos.getSelectedItem() + "','dd/mm/yyyy')";
+    }
 
-    }*/
+    private int IsInArray(String[] arr, String str) {
+        for(int i = 0;i<arr.length;i++) {
+            if(arr[i].equals(str)) {
+                return i;
+            }
+        }
+        return -1;
+    }
 
 }
