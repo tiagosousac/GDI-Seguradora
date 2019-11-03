@@ -1,5 +1,7 @@
 package Seguradora;
 
+import Consultas.Consultas;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -9,7 +11,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class TelaInicial {
-    public JButton cadastrarSeguradoraButton;
+    public JButton consultarButton;
     public JButton cadastrarPessoaButton;
     public JPanel TelaInicial;
 
@@ -23,6 +25,17 @@ public class TelaInicial {
                 cadastrarPessoaFrame.pack();
                 cadastrarPessoaFrame.setVisible(true);
                 cadastrarPessoaFrame.setMinimumSize(new Dimension(500,500));
+            }
+        });
+
+        consultarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFrame consultarFrame = new JFrame("consultar");
+                consultarFrame.setContentPane(new Consultas(connection).consultas);
+                consultarFrame.pack();
+                consultarFrame.setVisible(true);
+                consultarFrame.setMinimumSize(new Dimension(500,500));
             }
         });
     }
