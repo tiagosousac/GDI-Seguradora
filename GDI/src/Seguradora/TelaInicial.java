@@ -32,7 +32,7 @@ public class TelaInicial {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JFrame consultarFrame = new JFrame("consultar");
-                consultarFrame.setContentPane(new Consultas(connection).consultas);
+                consultarFrame.setContentPane(new Consultas().consultas);
                 consultarFrame.pack();
                 consultarFrame.setVisible(true);
                 consultarFrame.setMinimumSize(new Dimension(500,500));
