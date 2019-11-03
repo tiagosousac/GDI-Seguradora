@@ -13,15 +13,16 @@
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-15787711"/>
           <text value="Bem vindo à Companhia de Seguros"/>
         </properties>
       </component>
-      <component id="fcc3b" class="javax.swing.JButton" binding="cadastrarSeguradoraButton" default-binding="true">
+      <component id="fcc3b" class="javax.swing.JButton" binding="consultarButton" default-binding="true">
         <constraints>
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Cadastrar Seguradora"/>
+          <text value="Consultar"/>
         </properties>
       </component>
       <component id="cfe01" class="javax.swing.JButton" binding="cadastrarPessoaButton" default-binding="true">
