@@ -38,30 +38,34 @@ public class CadastrarPessoa extends JFrame{
         String[] anos = getAnos();
         DefaultComboBoxModel anos_modelo = new DefaultComboBoxModel(anos);
         comboBoxAnos.setModel(anos_modelo);
-
+        
         buscarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                String[] pessoaBuscada = ap.BuscarPessoa(BotarAspas(cpfTextField.getText()));
-                nomeTextField.setText(pessoaBuscada[0]);
-                System.out.println(pessoaBuscada[3]);
-                if(pessoaBuscada[3].equals("M")) {
-                    femininoRadioButton.setSelected(false);
-                    masculinoRadioButton.setSelected(true);
-                } else {
-                    masculinoRadioButton.setSelected(false);
-                    femininoRadioButton.setSelected(true);
+                try {
+                    String[] pessoaBuscada = ap.BuscarPessoa(BotarAspas(cpfTextField.getText()));
+                    nomeTextField.setText(pessoaBuscada[0]);
+                    System.out.println(pessoaBuscada[3]);
+                    if (pessoaBuscada[3].equals("M")) {
+                        femininoRadioButton.setSelected(false);
+                        masculinoRadioButton.setSelected(true);
+                    } else if (pessoaBuscada[3].equals("F")) {
+                        masculinoRadioButton.setSelected(false);
+                        femininoRadioButton.setSelected(true);
+                    }
+                    String ano = pessoaBuscada[2].substring(0, 4);
+                    comboBoxAnos.setSelectedIndex(IsInArray(anos, ano));
+
+                    String mes = pessoaBuscada[2].substring(5, 7);
+                    if (mes.charAt(0) == '0') mes = mes.substring(1);
+                    comboBoxMes.setSelectedIndex(IsInArray(meses, mes));
+
+                    String dia = pessoaBuscada[2].substring(8, 10);
+                    if (dia.charAt(0) == '0') dia = dia.substring(1);
+                    comboBoxDias.setSelectedIndex(IsInArray(dias, dia));
+                } catch (NullPointerException e) {
+                    JOptionPane.showMessageDialog(null, "Este cpf não está cadastrado.");
                 }
-                String ano = pessoaBuscada[2].substring(0,4);
-                comboBoxAnos.setSelectedIndex(IsInArray(anos, ano));
-
-                String mes = pessoaBuscada[2].substring(5,7);
-                if(mes.charAt(0) == '0') mes = mes.substring(1);
-                comboBoxMes.setSelectedIndex(IsInArray(meses, mes));
-
-                String dia = pessoaBuscada[2].substring(8,10);
-                if(dia.charAt(0) == '0') dia = dia.substring(1);
-                comboBoxDias.setSelectedIndex(IsInArray(dias, dia));
             }
         });
         incluirButton.addActionListener(new ActionListener() {
