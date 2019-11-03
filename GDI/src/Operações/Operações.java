@@ -84,7 +84,7 @@ public class Operações {
             if(rc == 0){
                 System.out.println("Record not inserted");
             } else {
-                System.out.println("Record inserted");
+                JOptionPane.showMessageDialog(null, "Imagem criada com sucesso");
             }
             fechaConexao(conn, ps);
 
@@ -107,7 +107,7 @@ public class Operações {
             ImageIcon icon=new ImageIcon(image);
             JFrame frame=new JFrame();
             frame.setLayout(new FlowLayout());
-            frame.setSize(1800,1000);
+            frame.setSize(720,720);
             JLabel lbl=new JLabel();
             lbl.setIcon(icon);
             frame.add(lbl);

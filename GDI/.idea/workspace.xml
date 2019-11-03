@@ -2,24 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3be5958e-c6ff-4e9a-a805-46f6cc8baead" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Seguradora/CadastrarBlob.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Seguradora/CadastrarBlob.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Seguradora/MostrarImagem.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Seguradora/MostrarImagem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GDI/Consultas/Consultas$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GDI/Consultas/Consultas$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GDI/Consultas/Consultas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GDI/Consultas/Consultas.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GDI/META-INF/GDI.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GDI/Seguradora/CadastrarPessoa$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GDI/Seguradora/CadastrarPessoa$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GDI/Seguradora/CadastrarPessoa$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GDI/Seguradora/CadastrarPessoa$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GDI/Seguradora/CadastrarPessoa$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GDI/Seguradora/CadastrarPessoa$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GDI/Seguradora/CadastrarPessoa.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GDI/Seguradora/CadastrarPessoa.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GDI/Seguradora/TelaInicial$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GDI/Seguradora/TelaInicial$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GDI/Seguradora/TelaInicial$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GDI/Seguradora/TelaInicial$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GDI/Seguradora/TelaInicial.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GDI/Seguradora/TelaInicial.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GDI/Operações/Operações.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GDI/Operações/Operações.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Consultas/Consultas.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Consultas/Consultas.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Operações/Operações.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Operações/Operações.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Seguradora/TelaInicial.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Seguradora/TelaInicial.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Seguradora/TelaInicial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Seguradora/TelaInicial.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -138,7 +124,7 @@
       <option name="presentableId" value="Default" />
       <updated>1572351256961</updated>
       <workItem from="1572726592861" duration="22311000" />
-      <workItem from="1572749698675" duration="5926000" />
+      <workItem from="1572749698675" duration="6932000" />
     </task>
     <servers />
   </component>
