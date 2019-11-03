@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
+import java.sql.SQLException;
 
 import Operações.AlterarPessoa;
 
@@ -13,8 +14,8 @@ public class CadastrarPessoa extends JFrame{
     private JButton alterarButton;
     private JButton excluirButton;
     private JButton limparButton;
-    private JTextField textField1;
-    private JTextField textField2;
+    private JTextField cpfTextField;
+    private JTextField nomeTextField;
     private JRadioButton masculinoRadioButton;
     private JRadioButton femininoRadioButton;
     private JComboBox comboBoxDias;
@@ -45,27 +46,77 @@ public class CadastrarPessoa extends JFrame{
         buscarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                String[] pessoaBuscada = ap.BuscarPessoa(BotarAspas(textField1.getText()));
-                textField2.setText(pessoaBuscada[1]);
-                if(pessoaBuscada[3] == "M") {
-                    masculinoRadioButton.setSelected(true);
+                String[] pessoaBuscada = ap.BuscarPessoa(BotarAspas(cpfTextField.getText()));
+                nomeTextField.setText(pessoaBuscada[0]);
+                System.out.println(pessoaBuscada[3]);
+                if(pessoaBuscada[3].equals("M")) {
                     femininoRadioButton.setSelected(false);
+                    masculinoRadioButton.setSelected(true);
                 } else {
-                    femininoRadioButton.setSelected(true);
                     masculinoRadioButton.setSelected(false);
+                    femininoRadioButton.setSelected(true);
                 }
                 String ano = pessoaBuscada[2].substring(0,4);
-                System.out.println(ano.length());
                 comboBoxAnos.setSelectedIndex(IsInArray(anos, ano));
-                System.out.println(IsInArray(anos, ano));
+
                 String mes = pessoaBuscada[2].substring(5,7);
-                System.out.println(mes.length());
+                if(mes.charAt(0) == '0') mes = mes.substring(1);
                 comboBoxMes.setSelectedIndex(IsInArray(meses, mes));
-                System.out.println(IsInArray(meses, mes));
+
                 String dia = pessoaBuscada[2].substring(8,10);
-                System.out.println(dia.length());
+                if(dia.charAt(0) == '0') dia = dia.substring(1);
                 comboBoxDias.setSelectedIndex(IsInArray(dias, dia));
-                System.out.println(IsInArray(dias, dia));
+            }
+        });
+        incluirButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                String cpf_pessoa = BotarAspas(cpfTextField.getText());
+                String nome_pessoa = BotarAspas(nomeTextField.getText());
+                String data = getDate();
+                String sexo = getSexo();
+                ap.InserirPessoa(nome_pessoa,cpf_pessoa, data, sexo);
+            }
+        });
+        alterarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                String cpf_pessoa = BotarAspas(cpfTextField.getText());
+                String nome_pessoa = BotarAspas(nomeTextField.getText());
+                String data = getDate();
+                String sexo = getSexo();
+                ap.EditarPessoa(nome_pessoa,cpf_pessoa, data, sexo);
+            }
+        });
+        excluirButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                String cpf_pessoa = BotarAspas(cpfTextField.getText());
+                ap.RemoverPessoa(cpf_pessoa);
+            }
+        });
+        limparButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                nomeTextField.setText("");
+                cpfTextField.setText("");
+                masculinoRadioButton.setSelected(false);
+                femininoRadioButton.setSelected(false);
+                comboBoxDias.setSelectedIndex(0);
+                comboBoxMes.setSelectedIndex(0);
+                comboBoxAnos.setSelectedIndex(0);
+            }
+        });
+        masculinoRadioButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                if(masculinoRadioButton.isSelected()) femininoRadioButton.setSelected(false);
+            }
+        });
+        femininoRadioButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                if(femininoRadioButton.isSelected()) masculinoRadioButton.setSelected(false);
             }
         });
     }
@@ -115,7 +166,7 @@ public class CadastrarPessoa extends JFrame{
 
     private int IsInArray(String[] arr, String str) {
         for(int i = 0;i<arr.length;i++) {
-            if(arr[i] == str) {
+            if(arr[i].equals(str)) {
                 return i;
             }
         }
