@@ -3,10 +3,8 @@ package Seguradora;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.Connection;
-import java.sql.SQLException;
 
-import Operações.AlterarPessoa;
+import Operações.Operações;
 
 public class CadastrarPessoa extends JFrame{
     public JPanel CadastrarPessoa;
@@ -22,12 +20,10 @@ public class CadastrarPessoa extends JFrame{
     private JComboBox comboBoxMes;
     private JComboBox comboBoxAnos;
     private JButton buscarButton;
-    public Connection connection;
-    public AlterarPessoa ap;
+    public Operações ap;
 
-    public CadastrarPessoa(Connection connection) {
-        this.connection = connection;
-        ap = new AlterarPessoa(connection);
+    public CadastrarPessoa() {
+        ap = new Operações();
         // setando combobox dos dias
         String[] dias = getDias();
         DefaultComboBoxModel dias_modelo = new DefaultComboBoxModel(dias);
